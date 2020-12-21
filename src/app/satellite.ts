@@ -11,7 +11,7 @@ this.type = type;
 this.operational = operational;
 this.launchDate = launchDate;
 }
-shouldShowWarning(): boolean {
+shouldShowWarning(){
     return this.type === "Space Debris";
 }
 }
