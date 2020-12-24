@@ -7,6 +7,16 @@
       <th>Orbit Type</th>
       <th>Launch Date</th>
    </tr>
+   <!--this works on both ways(either mentioning each properties of objects or using nested loop)-->
+   <!---<tr *ngFor="let satellite of satellites">
+      <td>{{satellite.name}} </td>
+      <td [class.warning]="satellite.shouldShowWarning()">
+         {{satellite.type}} </td>
+      <td>{{satellite.operational}} </td>
+      <td>{{satellite.orbitType}} </td>
+      <td>{{satellite.launchDate}} </td>
+    </tr>
+   </table>  ----> 
    <tr *ngFor="let satellite of satellites">
       <td *ngFor="let property of objectKeys(satellite)" [class.warning]="satellite.shouldShowWarning() && property === 'type'">
          {{satellite[property]}}
